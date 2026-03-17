@@ -4,11 +4,21 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 
+import { Routes, Route } from "react-router-dom"
+import Home from "./home.jsx"
+import BrowseSingers from "./BrowseSingers"
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/browse" element={<BrowseSingers />} />
+      </Routes>
+
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
