@@ -7,11 +7,10 @@
 /* Pink centered form box */
 .contact-box {
   background: #ffb6c1;
-  width: 420px;
-  margin: 60px auto 0 auto;
-  padding: 40px 50px;
-  border-radius: 12px;
-
+  padding: 60px 20px; 
+  max-width: 700px;    
+  margin: 0 auto;     
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,7 +30,7 @@
 
 /*Styling for the form*/
 .contact-form {
-  width: 100%;
+  max-width: 450px;           
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -43,9 +42,10 @@
   margin-top: 8px;
 }
 
+/* Inputs */
 .contact-input,
 .contact-textarea {
-  width: 100%;
+  width: 100%;                
   padding: 10px 12px;
   border-radius: 6px;
   border: 1px solid #999;
@@ -55,11 +55,12 @@
 
 /* Submit button */
 .contact-submit {
+  width: fit-content;        
+  align-self: center;        
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 17px;
   font-weight: 600;
-
   background: white;
   border: 2px solid black;
   border-radius: 30px;
@@ -67,8 +68,46 @@
   transition: 0.25s ease;
 }
 
-.contact-submit:hover {
-  background: #dd6879;
-  color: white;
-  border-color: #ffb6c1;
+.footer {
+  background: #000;           
+  color: #fff;               
+  padding: 40px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
 }
+
+.footer-left,
+.footer-right {
+  max-width: 300px;
+}
+
+.footer-brand {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #fff;                
+}
+
+.footer-tagline,
+.footer-copy,
+.footer-right p {
+  color: #ddd;              
+}
+
+.footer-heading {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    text-align: left;
+  }
+}
+

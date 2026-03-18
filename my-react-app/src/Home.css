@@ -116,11 +116,3 @@ body {
   color: white;
   border-color: #ffb6c1;
 }
-
-/* Footer */
-.footer {
-  margin-top: 60px;
-  font-size: 14px;
-  line-height: 1.4;
-  padding: 0 40px 40px 40px;
-}

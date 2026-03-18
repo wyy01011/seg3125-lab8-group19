@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import Footer from "./footer.jsx";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home.jsx"
@@ -21,6 +22,7 @@ function App() {
         <Route path="/browse" element={<BrowseSingers />} />
       </Routes>
 
+      <Footer />
     </>
   )
 }

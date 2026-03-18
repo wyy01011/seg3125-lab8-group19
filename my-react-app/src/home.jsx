@@ -5,13 +5,13 @@ export default function Home() {
   return (
     <div className="home-container">
 
-      {/* Top Navigation */}
+      {/*Top Navigation*/}
       <header className="nav">
         <Link className="logo" to="/">NoteMyWords</Link>
         <Link className="nav-book" to="/browse">Book Now</Link>
       </header>
 
-      {/* Main Singer Section */}
+      {/*HomePage Section*/}
       <section className="singer-section">
         <img src="/homepagesinger.jpg" alt="Singer" className="singer-image" />
 
@@ -20,13 +20,6 @@ export default function Home() {
           <Link className="singer-button" to="/browse">Book Now</Link>
         </div>
       </section>
-
-      {/* Footer Text */}
-      <footer className="footer">
-        <p>Contacts: xxxxxx</p>
-        <p>Email: xxx</p>
-        <p>Created by YiYau Wong, David Chen, Zilin Liu</p>
-      </footer>
 
     </div>
   );

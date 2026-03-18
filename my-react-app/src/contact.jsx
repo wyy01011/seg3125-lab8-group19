@@ -30,13 +30,6 @@ export default function Contact() {
         </form>
       </section>
 
-      {/* Footer (same as Home) */}
-      <footer className="footer">
-        <p>Contacts: xxxxxx</p>
-        <p>Email: xxx</p>
-        <p>Created by YiYau Wong, David Chen, Zilin Liu</p>
-      </footer>
-
     </div>
   );
 }
