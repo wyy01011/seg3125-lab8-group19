@@ -5,12 +5,6 @@ export default function Contact() {
   return (
     <div className="contact-container">
 
-      {/* Top Navigation (same as Home) */}
-      <header className="nav">
-        <h1 className="logo">NoteMyWords</h1>
-        <Link className="nav-book" to="/browse">Book Now</Link>
-      </header>
-
       {/* Contact Form Section */}
       <section className="contact-box">
         <h2 className="contact-title">Contact Us</h2>

@@ -13,17 +13,6 @@ body {
   padding: 0;
 }
 
-/* Top bar — centered block */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  max-width: 900px;   /* controls how close to center */
-  margin: 0 auto;     /* centers the whole header */
-  padding: 25px 40px;
-}
-
 .logo {
   color: black;
   font-size: 28px;

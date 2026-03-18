@@ -5,12 +5,6 @@ export default function Home() {
   return (
     <div className="home-container">
 
-      {/*Top Navigation*/}
-      <header className="nav">
-        <Link className="logo" to="/">NoteMyWords</Link>
-        <Link className="nav-book" to="/browse">Book Now</Link>
-      </header>
-
       {/*HomePage Section*/}
       <section className="singer-section">
         <img src="/homepagesinger.jpg" alt="Singer" className="singer-image" />

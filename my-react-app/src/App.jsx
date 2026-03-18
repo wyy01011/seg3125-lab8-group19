@@ -4,6 +4,7 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import Footer from "./footer.jsx";
+import Header from "./header.jsx";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home.jsx"
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <>
+      <Header /> 
 
       <Routes>
         <Route path="/" element={<Home />} /> {/*Homepage is the first one loaded.*/} 

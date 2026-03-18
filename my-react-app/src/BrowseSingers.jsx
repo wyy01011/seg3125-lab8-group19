@@ -89,11 +89,6 @@ export default function BrowseSingers() {
 
   return (
     <div className="browse-page">
-      {/* Top Navigation */}
-      <header className="nav">
-        <Link className="logo" to="/">NoteMyWords</Link>
-        <Link className="nav-book" to="/browse">Book Now</Link>
-      </header>
 
       <div className="browse-content">
         <aside className="filter-panel">
