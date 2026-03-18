@@ -7,7 +7,7 @@ export default function Home() {
 
       {/* Top Navigation */}
       <header className="nav">
-        <h1 className="logo">NoteMyWords</h1>
+        <Link className="logo" to="/">NoteMyWords</Link>
         <Link className="nav-book" to="/browse">Book Now</Link>
       </header>
 

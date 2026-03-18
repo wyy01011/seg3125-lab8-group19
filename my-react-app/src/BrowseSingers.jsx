@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./BrowseSingers.css";
 
 const singersData = [
@@ -88,9 +89,10 @@ export default function BrowseSingers() {
 
   return (
     <div className="browse-page">
-      <header className="browse-header">
-        <h1 className="logo">NoteMyWords</h1>
-        <button className="book-btn">Book Now</button>
+      {/* Top Navigation */}
+      <header className="nav">
+        <Link className="logo" to="/">NoteMyWords</Link>
+        <Link className="nav-book" to="/browse">Book Now</Link>
       </header>
 
       <div className="browse-content">
@@ -186,7 +188,7 @@ export default function BrowseSingers() {
                     <img
                       src={singer.image}
                       alt={singer.name}
-                      className="singer-image"
+                      className="singer-image-browse"
                     />
 
                     <div className="singer-info">
