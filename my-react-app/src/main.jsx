@@ -5,7 +5,7 @@ import './index.css'
 
 import App from './App.jsx'
 import BrowseSingers from "./BrowseSingers"
-import Home from "./home.jsx"
+import Home from "./Home.jsx"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
