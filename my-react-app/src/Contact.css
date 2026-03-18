@@ -1,0 +1,74 @@
+/* Page wrapper */
+.contact-container {
+  background-color: #f3f3f3;
+  min-height: 100vh;
+}
+
+/* Pink centered form box */
+.contact-box {
+  background: #ffb6c1;
+  width: 420px;
+  margin: 60px auto 0 auto;
+  padding: 40px 50px;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 28px;
+  margin-bottom: 5px;
+  font-weight: 800;
+}
+
+.contact-subtitle {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+/*Styling for the form*/
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form label {
+  text-align: left;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #999;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+
+/* Submit button */
+.contact-submit {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: 600;
+
+  background: white;
+  border: 2px solid black;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.contact-submit:hover {
+  background: #dd6879;
+  color: white;
+  border-color: #ffb6c1;
+}

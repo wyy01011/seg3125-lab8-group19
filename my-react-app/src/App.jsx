@@ -6,6 +6,7 @@ import './App.css'
 
 import { Routes, Route } from "react-router-dom"
 import Home from "./home.jsx"
+import Contact from "./contact.jsx"
 import BrowseSingers from "./BrowseSingers"
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
     <>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} /> {/*Homepage is the first one loaded.*/} 
+        <Route path="/contact" element={<Contact />} />
         <Route path="/browse" element={<BrowseSingers />} />
       </Routes>
 
