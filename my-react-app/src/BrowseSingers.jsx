@@ -4,44 +4,64 @@ import "./BrowseSingers.css";
 
 export const singersData = [
   {
-    id: 1,
-    name: "Ian Chan",
-    image: "/ian.jpg",
-    availability: ["Weekdays"],
-    genres: ["Pop", "Jazz", "R&B"],
-    price: 200,
+  id: 1,
+  name: "Ian Chan",
+  image: "/ian.jpg",
+  availability: ["Weekdays"],
+  genres: ["Pop", "Jazz", "R&B"],
+  price: 200,
+  location: "Hong Kong",
+  languages: ["Cantonese", "English"],
+  experience: "5 years",
+  bio: "Ian Chan is a versatile singer known for pop, jazz, and R&B performances. He is suitable for live stages, school events, and formal performances."
   },
   {
-    id: 2,
-    name: "Sabrina Carpenter",
-    image: "/sabrina.jpg",
-    availability: ["Weekends"],
-    genres: ["R&B", "Pop"],
-    price: 85,
+  id: 2,
+  name: "Sabrina Carpenter",
+  image: "/sabrina.jpg",
+  availability: ["Weekends"],
+  genres: ["R&B", "Pop"],
+  price: 85,
+  location: "Los Angeles",
+  languages: ["English"],
+  experience: "6 years",
+  bio: "Sabrina Carpenter is a pop and R&B singer who performs well in energetic and youth-oriented events."
   },
   {
-    id: 3,
-    name: "Shiga Lin",
-    image: "/shiga.jpg",
-    availability: ["Weekdays", "Weekends"],
-    genres: ["Pop", "Jazz"],
-    price: 95,
+  id: 3,
+  name: "Shiga Lin",
+  image: "/shiga.jpg",
+  availability: ["Weekdays", "Weekends"],
+  genres: ["Pop", "Jazz"],
+  price: 95,
+  location: "Hong Kong",
+  languages: ["Cantonese", "Mandarin", "English"],
+  experience: "7 years",
+  bio: "Shiga Lin is known for elegant stage presence and strong vocal delivery, suitable for both casual and formal event settings."
   },
   {
-    id: 4,
-    name: "Joe Jonas",
-    image: "/joe.jpg",
-    availability: ["Weekdays"],
-    genres: ["Jazz", "R&B"],
-    price: 75,
+  id: 4,
+  name: "Joe Jonas",
+  image: "/joe.jpg",
+  availability: ["Weekdays"],
+  genres: ["Jazz", "R&B"],
+  price: 75,
+  location: "New York",
+  languages: ["English"],
+  experience: "8 years",
+  bio: "Joe Jonas is an experienced performer with a strong background in live shows and audience interaction."
   },
   {
-    id: 5,
-    name: "Teddy Fan",
-    image: "/teddy.jpg",
-    availability: ["Weekdays", "Weekends"],
-    genres: ["Pop"],
-    price: 80,
+  id: 5,
+  name: "Teddy Fan",
+  image: "/teddy.jpg",
+  availability: ["Weekdays", "Weekends"],
+  genres: ["Pop"],
+  price: 80,
+  location: "Hong Kong",
+  languages: ["Cantonese", "English"],
+  experience: "4 years",
+  bio: "Teddy Fan is a pop singer suitable for private parties, school events, and community performances."
   },
 ];
 
@@ -199,10 +219,15 @@ export default function BrowseSingers() {
                         <li>${singer.price}/hour</li>
                       </ul>
                     </div>
+                    <div className="card-actions">
+                      <Link to={`/singer/${singer.id}`} className="learn-btn">
+                        Learn More
+                      </Link>
 
-                    <Link to="/singer/:id">
-                      <button className="learn-btn">Learn More</button>
-                  </Link>
+                      <Link to={`/booking/${singer.id}`} className="learn-btn">
+                        Book Now
+                      </Link>
+                    </div>
                   </div>
                 );
               })

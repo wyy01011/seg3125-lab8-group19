@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { singersData } from "./BrowseSingers";
-import "./BrowseSingers.css";
+import "./SingerDetail.css";
 
 export default function SingerDetail() {
   const { id } = useParams();
@@ -11,7 +11,7 @@ export default function SingerDetail() {
     return (
       <div className="singer-detail-page">
         <h2>Singer not found.</h2>
-        <Link to="/browse" className="learn-btn">
+        <Link to="/browse" className="detail-back-btn">
           Back to Browse
         </Link>
       </div>
@@ -24,11 +24,11 @@ export default function SingerDetail() {
         <img
           src={singer.image}
           alt={singer.name}
-          className="singer-image-detail"
+          className="singer-detail-image"
         />
 
         <div className="singer-detail-info">
-          <h2>{singer.name}</h2>
+          <h1>{singer.name}</h1>
 
           <p>
             <strong>Availability:</strong> {singer.availability.join(", ")}
@@ -43,17 +43,27 @@ export default function SingerDetail() {
           </p>
 
           <p>
-            <strong>About:</strong> This singer is available for event bookings
-            and can perform according to the genres and availability listed
-            above.
+            <strong>Location:</strong> {singer.location}
+          </p>
+
+          <p>
+            <strong>Languages:</strong> {singer.languages.join(", ")}
+          </p>
+
+          <p>
+            <strong>Experience:</strong> {singer.experience}
+          </p>
+
+          <p>
+            <strong>Bio:</strong> {singer.bio}
           </p>
 
           <div className="detail-actions">
-            <Link to="/browse" className="learn-btn">
-              Back
+            <Link to="/browse" className="detail-back-btn">
+              Back to Browse
             </Link>
 
-            <Link to={`/booking/${singer.id}`} className="book-btn">
+            <Link to={`/booking/${singer.id}`} className="detail-book-btn">
               Book Now
             </Link>
           </div>

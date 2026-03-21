@@ -44,6 +44,10 @@ export default function Booking() {
     <div className="contact-page">
       <h1>Book {singer.name}</h1>
 
+      <p style={{ textAlign: "center", marginBottom: "20px" }}>
+        You are sending a booking request for {singer.name}. This is a front-end demo only.
+      </p>
+
       <form className="contact-form" onSubmit={handleSubmit}>
         <label>
           Your Name
@@ -113,13 +117,13 @@ export default function Booking() {
       </form>
 
       {submitted && (
-        <p style={{ marginTop: "20px", fontWeight: "bold" }}>
+        <p style={{ marginTop: "20px", textAlign: "center", fontWeight: "bold" }}>
           Booking request submitted successfully. This is a front-end demo only.
         </p>
       )}
 
-      <div style={{ marginTop: "20px" }}>
-        <Link to="/browse" className="learn-btn">
+      <div style={{ marginTop: "20px", textAlign: "center" }}>
+        <Link to="/browse" className="detail-back-btn">
           Back to Browse
         </Link>
       </div>

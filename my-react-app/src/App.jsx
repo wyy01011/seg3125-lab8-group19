@@ -25,7 +25,7 @@ function App() {
         <Route path="/" element={<Home />} /> {/*Homepage is the first one loaded.*/} 
         <Route path="/contact" element={<Contact />} />
         <Route path="/browse" element={<BrowseSingers />} />
-        
+
         <Route path="/singer/:id" element={<SingerDetail />} />
         <Route path="/booking/:id" element={<Booking />} />
       </Routes>
