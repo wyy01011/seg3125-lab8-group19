@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./BrowseSingers.css";
 
-const singersData = [
+export const singersData = [
   {
     id: 1,
     name: "Ian Chan",
@@ -94,7 +94,9 @@ export default function BrowseSingers() {
         <aside className="filter-panel">
         <div className="filter-header">
           <h2>Filter</h2>
-          <button className="clear-btn" onClick={clearFilters}>Remove all</button>
+          <div className="card-actions">
+            <button className="clear-btn" onClick={clearFilters}>Remove all</button>
+        </div>
         </div>
           
           <div className="filter-group">
@@ -198,7 +200,9 @@ export default function BrowseSingers() {
                       </ul>
                     </div>
 
-                    <button className="learn-btn">Learn More</button>
+                    <Link to="/singer/:id">
+                      <button className="learn-btn">Learn More</button>
+                  </Link>
                   </div>
                 );
               })
@@ -214,4 +218,4 @@ export default function BrowseSingers() {
       
     </div>
   );
-}
+}  
