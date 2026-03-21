@@ -79,8 +79,8 @@
 .footer {
   margin-top: 0;
   width: 100%; 
-  background: #000;
-  color: #fff;
+  background: #f3f3f3;
+  color: #000000;
   padding: 40px 60px;
   display: flex;
   justify-content: space-between;
@@ -99,20 +99,20 @@
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 8px;
-  color: #fff;                
+  color: #000000;                
 }
 
 .footer-tagline,
 .footer-copy,
 .footer-right p {
-  color: #ddd;              
+  color: #000000;              
 }
 
 .footer-heading {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #fff;
+  color: #000000;
 }
 
 @media (max-width: 700px) {
