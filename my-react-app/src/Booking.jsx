@@ -45,7 +45,7 @@ export default function Booking() {
       <h1>Book {singer.name}</h1>
 
       <p style={{ textAlign: "center", marginBottom: "20px" }}>
-        You are sending a booking request for {singer.name}. This is a front-end demo only.
+        You are sending a booking request for {singer.name}. Hope you enjoy that!
       </p>
 
       <form className="contact-form" onSubmit={handleSubmit}>
@@ -118,7 +118,7 @@ export default function Booking() {
 
       {submitted && (
         <p style={{ marginTop: "20px", textAlign: "center", fontWeight: "bold" }}>
-          Booking request submitted successfully. This is a front-end demo only.
+          Booking request submitted successfully. Hope you enjoy that!
         </p>
       )}
 
