@@ -4,6 +4,7 @@ import { singersData } from "./BrowseSingers";
 import "./Contact.css";
 
 export default function Booking() {
+  
   const { id } = useParams();
   const singer = singersData.find((s) => s.id === Number(id));
 
