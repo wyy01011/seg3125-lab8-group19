@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/wyy01011/seg3125-lab8-group19",
+  "homepage": "https://wyy01011.github.io/seg3125-lab8-group19/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

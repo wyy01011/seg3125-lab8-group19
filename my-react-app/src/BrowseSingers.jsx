@@ -2,11 +2,17 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./BrowseSingers.css";
 
+import ianImg from "./assets/ian.jpg";
+import sabrinaImg from "./assets/sabrina.jpg";
+import shigaImg from "./assets/shiga.jpg";
+import joeImg from "./assets/joe.jpg";
+import teddyImg from "./assets/teddy.jpg";
+
 export const singersData = [
   {
   id: 1,
   name: "Ian Chan",
-  image: "/ian.jpg",
+  image: ianImg,
   availability: ["Weekdays"],
   genres: ["Pop", "Jazz", "R&B"],
   price: 200,
@@ -18,7 +24,7 @@ export const singersData = [
   {
   id: 2,
   name: "Sabrina Carpenter",
-  image: "/sabrina.jpg",
+  image: sabrinaImg,
   availability: ["Weekends"],
   genres: ["R&B", "Pop"],
   price: 85,
@@ -30,7 +36,7 @@ export const singersData = [
   {
   id: 3,
   name: "Shiga Lin",
-  image: "/shiga.jpg",
+  image: shigaImg,
   availability: ["Weekdays", "Weekends"],
   genres: ["Pop", "Jazz"],
   price: 95,
@@ -42,7 +48,7 @@ export const singersData = [
   {
   id: 4,
   name: "Joe Jonas",
-  image: "/joe.jpg",
+  image: joeImg,
   availability: ["Weekdays"],
   genres: ["Jazz", "R&B"],
   price: 75,
@@ -54,7 +60,7 @@ export const singersData = [
   {
   id: 5,
   name: "Teddy Fan",
-  image: "/teddy.jpg",
+  image: teddyImg,
   availability: ["Weekdays", "Weekends"],
   genres: ["Pop"],
   price: 80,
