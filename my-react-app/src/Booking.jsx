@@ -344,7 +344,7 @@ export default function Booking() {
             </p>
 
             <div className="booking-modal-actions">
-              <button type="button" onClick={closeModal}>
+              <button type="button" className="detail-back-btn" onClick={closeModal}>
                 Close
               </button>
             </div>
