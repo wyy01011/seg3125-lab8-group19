@@ -150,6 +150,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 380px;
+  height: 100%;
 }
 
 .singer-image-browse {
@@ -162,6 +163,7 @@ body {
 
 .singer-info {
   width: 100%;
+  flex-grow: 1;
 }
 
 .singer-info h4 {
@@ -192,8 +194,9 @@ body {
 
 .card-actions {
   display: flex;
+  flex-direction: column;
   gap: 12px;
-  justify-content: center;
-  margin-top: 12px;
-  flex-wrap: wrap;
+  align-items: center;
+  margin-top: auto;
+  padding-bottom: 12px;
 }

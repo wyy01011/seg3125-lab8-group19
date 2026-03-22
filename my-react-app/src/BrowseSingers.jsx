@@ -211,14 +211,12 @@ export default function BrowseSingers() {
                     <div className="singer-info">
                       <h4>{singer.name}</h4>
                       <ul>
-                        <li>
-                          Available{" "}
-                          {singer.availability.join(", ").toLowerCase()}
-                        </li>
+                        <li>Available {singer.availability.join(", ").toLowerCase()}</li>
                         <li>{singer.genres.join(", ")}</li>
                         <li>${singer.price}/hour</li>
                       </ul>
                     </div>
+
                     <div className="card-actions">
                       <Link to={`/singer/${singer.id}`} className="learn-btn">
                         Learn More

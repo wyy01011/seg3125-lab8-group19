@@ -15,9 +15,10 @@ function isDateAvailable(dateString, availability) {
   if (!dateString) return false;
 
   const chosenDate = new Date(dateString + "T00:00:00");
-  const day = chosenDate.getDay();
+  const day = chosenDate.getDay(); // 0 Sunday, 6 Saturday
+
   const isWeekend = day === 0 || day === 6;
-  const isWeekday = !isWeekend;
+  const isWeekday = day >= 1 && day <= 5;
 
   const hasWeekdays = availability.includes("Weekdays");
   const hasWeekends = availability.includes("Weekends");
@@ -92,9 +93,19 @@ export default function Booking() {
 
     if (name === "eventDate") {
       if (value && !isDateAvailable(value, singer.availability)) {
-        setErrorMessage(
-          `${singer.name} is only available on ${singer.availability.join(", ")}.`
-        );
+        if (
+          singer.availability.includes("Weekdays") &&
+          !singer.availability.includes("Weekends")
+        ) {
+          setErrorMessage(`${singer.name} is only available on weekdays.`);
+        } else if (
+          singer.availability.includes("Weekends") &&
+          !singer.availability.includes("Weekdays")
+        ) {
+          setErrorMessage(`${singer.name} is only available on weekends.`);
+        } else {
+          setErrorMessage("");
+        }
       } else {
         setErrorMessage("");
       }
@@ -110,9 +121,19 @@ export default function Booking() {
     }
 
     if (!isDateAvailable(formData.eventDate, singer.availability)) {
-      setErrorMessage(
-        `${singer.name} is only available on ${singer.availability.join(", ")}.`
-      );
+      if (
+        singer.availability.includes("Weekdays") &&
+        !singer.availability.includes("Weekends")
+      ) {
+        setErrorMessage(`${singer.name} is only available on weekdays.`);
+      } else if (
+        singer.availability.includes("Weekends") &&
+        !singer.availability.includes("Weekdays")
+      ) {
+        setErrorMessage(`${singer.name} is only available on weekends.`);
+      } else {
+        setErrorMessage("The selected date is not available.");
+      }
       return;
     }
 
@@ -127,12 +148,14 @@ export default function Booking() {
     }
 
     if (!/^\d{3}$/.test(formData.cvc)) {
-      setErrorMessage("CVC must be exactly 3 digits.");
+      setErrorMessage("CVV must be exactly 3 digits.");
       return;
     }
 
     if (!isFutureExpiry(formData.expiryDate)) {
-      setErrorMessage("Expiry date must be in MM/YY format and later than the current date.");
+      setErrorMessage(
+        "Expiry date must be in MM/YY format and later than the current date."
+      );
       return;
     }
 
@@ -286,7 +309,7 @@ export default function Booking() {
         </div>
       </div>
 
-            {showModal && (
+      {showModal && (
         <div className="booking-modal-overlay">
           <div className="booking-modal">
             <h2>Booking Confirmation</h2>
@@ -328,7 +351,6 @@ export default function Booking() {
           </div>
         </div>
       )}
-          
     </div>
   );
 }
